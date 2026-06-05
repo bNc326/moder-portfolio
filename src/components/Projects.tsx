@@ -16,7 +16,7 @@ const Projects = () => {
           <PageTitleBadge className="text-body bg-linear-to-r from-accent-2/10 to-accent/20 backdrop-blur-xs">
             lorem
           </PageTitleBadge>
-          <PageTitleHeading as="h2">My real projects</PageTitleHeading>
+          <PageTitleHeading as="h2">My real <div className="sweep-text drop-shadow-[0_0_64px_var(--accent)]">projects</div></PageTitleHeading>
           <PageTitleSubtitle>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
             ipsum?

@@ -220,6 +220,40 @@ body::before {
   opacity: 0.6;
 }
 
+.sweep-text {
+  display: inline-block;
+
+  background: linear-gradient(
+    110deg,
+    var(--accent) 0%,
+    var(--accent-2) 45%,
+    var(--accent-foreground) 50%,
+    var(--accent-2) 55%,
+    var(--accent) 100%
+  );
+
+  background-size: 250% 100%;
+  background-position: 100% 0;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  animation: sweep 5s ease-in-out infinite;
+}
+
+@keyframes sweep {
+  0% {
+    background-position: 110% 0;
+  }
+  60% {
+    background-position: -10% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
 @keyframes shine {
   0% {
     left: -100px;
@@ -245,6 +279,19 @@ body::before {
 
   100% {
     left: 100%;
+  }
+}
+
+@keyframes slow-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -30px);
+  }
+  75% {
+    transform: translate(-15px, -20px);
   }
 }
 

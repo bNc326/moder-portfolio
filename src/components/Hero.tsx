@@ -10,7 +10,7 @@ const HeroCard = (props: {
   description: React.ReactNode
 }) => {
   return (
-    <div className="grid grid-rows-subgrid glow-border row-span-3 bg-accent-2/5 p-4 rounded-2xl backdrop-blur-md">
+    <div className="grid grid-rows-subgrid glow-border row-span-3 bg-accent-2/5 p-4 rounded-2xl backdrop-blur-xs">
       <div className="relative">
         <props.Icon className="size-10 text-accent" />
       </div>
@@ -99,6 +99,22 @@ const Hero = () => {
             description="System used by real users"
           />
         </div>
+      </div>
+      {/* Background dots */}
+
+      <div>
+        {[...Array(30)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1.5 h-1.5 rounded-full bg-radial blur-[1px] opacity-40 from-accent to-accent-2 -z-2"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
       </div>
     </section>
   )
