@@ -1,16 +1,8 @@
 import React from 'react'
-import { Button } from './button'
-import {
-  Calendar,
-  ChevronRight,
-  Code,
-  Mail,
-  Server,
-  Users,
-  type LucideIcon,
-} from 'lucide-react'
-import { Badge } from './badge'
-import { Separator } from './separator'
+import { Button } from './ui/button'
+import { Calendar, ChevronRight, Code, Mail, Server, Users } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { Badge } from './ui/badge'
 
 const HeroCard = (props: {
   title: React.ReactNode

@@ -44,8 +44,6 @@ const PageTitleBg = React.forwardRef<HTMLSpanElement, PageTitleBgProps>(
           // container-inline mérethez igazodik, sosem lóg ki
           '[font-size:clamp(2.5rem,15cqi,12rem)]',
           'overflow-hidden',
-          // Halvány, tema-tudatos szín
-          'text-foreground/[0.04] dark:text-foreground/[0.06]',
           // Ne interferáljon a kattintással
           'pointer-events-none whitespace-nowrap',
           className,
@@ -127,7 +125,7 @@ const PageTitleBadge = React.forwardRef<HTMLSpanElement, PageTitleBadgeProps>(
         ref={ref}
         className={cn(
           'relative z-10 mb-4 inline-flex items-center gap-1.5',
-          'rounded-full border border-border bg-muted px-3 py-1',
+          'rounded-full px-3 py-1',
           'text-xs font-medium uppercase tracking-widest text-muted-foreground',
           className,
         )}
@@ -154,7 +152,7 @@ const PageTitleDivider = React.forwardRef<
       className={cn(
         'relative z-10 mt-6',
         'h-px w-24',
-        'bg-gradient-to-r from-transparent via-border to-transparent',
+        'bg-linear-to-r from-transparent via-accent-2 to-transparent',
         className,
       )}
       {...props}
